@@ -171,7 +171,7 @@ describe('Project endpoint', () => {
 
 describe('Like endpoint', () => {
     before((done) => {  // Setup
-        async.parallel([
+        async.series([
             (next) => db.createUser('Jim', next),
             (next) => db.createUser('Rob', next),
             (next) => db.createProject('Bar', 2017, 12, 31, next),
