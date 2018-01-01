@@ -195,20 +195,20 @@ describe('Like endpoint', () => {
                 },
                 (next) => {
                     request(app).get('/user/1').expect(200).end((err, res) => {
-                        assert.deepEqual(res.body.likes, [1]);
+                        assert.deepEqual(res.body.likes, ["Bar"]);
                         next(err);
                     });
                 },
                 (next) => {
                     request(app).get('/user/2').expect(200).end((err, res) => {
-                        assert.deepEqual(res.body.likes, [1]);
+                        assert.deepEqual(res.body.likes, ["Bar"]);
                         next(err);
                     });
                 },
                 (next) => {
                     request(app).get('/project/1').expect(200)
                     .end((err, res) => {
-                        assert.deepEqual(res.body.likedBy, [1, 2]);
+                        assert.deepEqual(res.body.likedBy, ["Jim", "Rob"]);
                         next(err);
                     });
                 },
@@ -249,14 +249,14 @@ describe('Like endpoint', () => {
                 },
                 (next) => {
                     request(app).get('/user/2').expect(200).end((err, res) => {
-                        assert.deepEqual(res.body.likes, [1]);
+                        assert.deepEqual(res.body.likes, ["Bar"]);
                         next(err);
                     });
                 },
                 (next) => {
                     request(app).get('/project/1').expect(200)
                     .end((err, res) => {
-                        assert.deepEqual(res.body.likedBy, [2]);
+                        assert.deepEqual(res.body.likedBy, ["Rob"]);
                         next(err);
                     });
                 },

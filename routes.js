@@ -38,7 +38,7 @@ function retrieveUser(req, res, next) {
         res.send({
             id: userId,
             name: rows[0].name,
-            likes: _.compact(rows.map((row) => row.project_id)),
+            likes: _.compact(rows.map((row) => row.liked_project)),
         });
         next();
     });
@@ -93,7 +93,7 @@ function retrieveProject(req, res, next) {
             id: projectId,
             name: rows[0].name,
             date: helpers.formatDate(rows[0].year, rows[0].month, rows[0].day),
-            likedBy: _.compact(rows.map((row) => row.user_id)),
+            likedBy: _.compact(rows.map((row) => row.liked_by)),
         });
         next();
     });

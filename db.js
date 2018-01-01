@@ -53,9 +53,10 @@ function createUser(name, callback) {
 
 function retrieveUser(userId, callback) {
     session.all(
-        `SELECT user.name, like.project_id
+        `SELECT user.name, project.name AS liked_project
          FROM user
          LEFT JOIN like ON user.id = like.user_id
+         LEFT JOIN project ON project.id = like.project_id
          WHERE user.id = ?`,
         userId,
         callback
@@ -85,9 +86,10 @@ function createProject(name, year, month, day, callback) {
 function retrieveProject(projectId, callback) {
     session.all(
         `SELECT project.name, project.year, project.month, project.day,
-                like.user_id
+                user.name as liked_by
          FROM project
          LEFT JOIN like ON project.id = like.project_id
+         LEFT JOIN user ON user.id = like.user_id
          WHERE project.id = ?`,
         projectId,
         callback
