@@ -24,6 +24,9 @@ function parseDate(dateString) {
     return null;
 }
 
+/**
+ * Reverse `parseDate`
+ */
 function formatDate(year, month, day) {
     return `${zeroFill(year, 4)}-${zeroFill(month, 2)}-${zeroFill(day, 2)}`;
 }
