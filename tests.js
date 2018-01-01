@@ -1,4 +1,5 @@
 // Tests with Mocha framework
+// (run with `npm test`)
 
 process.env.NODE_ENV = 'test';
 
@@ -17,21 +18,12 @@ describe('Date parser', () => {
     it('should split a valid date to year, month, day', () => {
         assert.deepEqual(
             helpers.parseDate('2018-01-01'),
-            {
-                year: 2018,
-                month: 1,
-                day: 1
-            }
+            { year: 2018, month: 1, day: 1 }
         );
     });
     [
-        'gibberish',
-        undefined,
-        '2018-2-2',
-        '2018-00-02',
-        '2018-02-00',
-        '2018-13-02',
-        '2018-02-30'
+        'gibberish', undefined, '2018-2-2', '2018-00-02', '2018-02-00',
+        '2018-13-02', '2018-02-30'
     ].forEach((dateString) => {
         it(`should detect invalid date "${dateString}"`, () => {
             assert.equal(helpers.parseDate(dateString), null);
@@ -58,8 +50,9 @@ before((done) => {  // Setup
 describe('User endpoint', () => {
     describe('POST request', () => {
         it('should create a new user', (done) => {
-            request(app).post('/user').send({ name: 'Joe' })
-            .expect(201).end((err, res) => {
+            request(app).post('/user').send({
+                name: 'Joe'
+            }).expect(201).end((err, res) => {
                 assert.deepEqual(res.body, { id: 1 });
                 done(err);
             });
@@ -180,16 +173,23 @@ describe('Like endpoint', () => {
     before((done) => {  // Setup
         async.parallel([
             (next) => db.createUser('Jim', next),
+            (next) => db.createUser('Rob', next),
             (next) => db.createProject('Bar', 2017, 12, 31, next),
         ], done);
     });
 
     describe('POST request', () => {
-        it('should add a like to a project and user', (done) => {
+        it('should let users like an existing project', (done) => {
             async.series([
                 (next) => {
                     request(app).post('/like').send({
                         userId: 1,
+                        projectId: 1
+                    }).expect(200, next);
+                },
+                (next) => {
+                    request(app).post('/like').send({
+                        userId: 2,
                         projectId: 1
                     }).expect(200, next);
                 },
@@ -200,9 +200,15 @@ describe('Like endpoint', () => {
                     });
                 },
                 (next) => {
+                    request(app).get('/user/2').expect(200).end((err, res) => {
+                        assert.deepEqual(res.body.likes, [1]);
+                        next(err);
+                    });
+                },
+                (next) => {
                     request(app).get('/project/1').expect(200)
                     .end((err, res) => {
-                        assert.deepEqual(res.body.likedBy, [1]);
+                        assert.deepEqual(res.body.likedBy, [1, 2]);
                         next(err);
                     });
                 },
@@ -227,7 +233,7 @@ describe('Like endpoint', () => {
        });
     });
     describe('DELETE request', () => {
-        it('should remove a like from a project and user', (done) => {
+        it('let a user unlike an existing project', (done) => {
             async.series([
                 (next) => {
                     request(app).delete('/like').send({
@@ -242,9 +248,15 @@ describe('Like endpoint', () => {
                     });
                 },
                 (next) => {
+                    request(app).get('/user/2').expect(200).end((err, res) => {
+                        assert.deepEqual(res.body.likes, [1]);
+                        next(err);
+                    });
+                },
+                (next) => {
                     request(app).get('/project/1').expect(200)
                     .end((err, res) => {
-                        assert.deepEqual(res.body.likedBy, []);
+                        assert.deepEqual(res.body.likedBy, [2]);
                         next(err);
                     });
                 },
