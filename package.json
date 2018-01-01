@@ -1,7 +1,6 @@
 {
   "name": "assessment_project",
   "version": "1.0.0",
-  "main": "app.js",
   "scripts": {
     "pretest": "jshint *.js",
     "test": "mocha tests.js"
