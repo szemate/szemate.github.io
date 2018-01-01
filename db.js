@@ -6,9 +6,6 @@
 const sqlite3 = require('sqlite3');
 const session = new sqlite3.Database(':memory:');
 
-process.on('exit', session.close);
-process.on('SIGINT', session.close);
-
 function init(callback) {
     session.serialize(() => {
         session.run("PRAGMA foreign_keys = ON");
@@ -35,6 +32,10 @@ function init(callback) {
             callback
         );
     });
+}
+
+function close(callback) {
+    session.close(callback);
 }
 
 function getLastId(callback) {
@@ -124,6 +125,7 @@ function removeLike(userId, projectId, callback) {
 
 module.exports = {
     addLike,
+    close,
     createProject,
     createUser,
     deleteProject,

@@ -47,6 +47,10 @@ before((done) => {  // Setup
     db.init(done);
 });
 
+after((done) => {  // Teardown
+    db.close(done);
+});
+
 describe('User endpoint', () => {
     describe('POST request', () => {
         it('should create a new user', (done) => {

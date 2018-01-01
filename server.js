@@ -36,6 +36,11 @@ app.delete('/like', routes.removeLike);
 
 // Initialisation
 if (process.env.NODE_ENV !== 'test') {
+    process.on('SIGINT', () => {
+        db.close((err) => {
+            process.exit(err ? 1 : 0);
+        });
+    });
     db.init((err) => {
         if (err) {
             throw err;
