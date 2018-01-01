@@ -233,7 +233,7 @@ describe('Like endpoint', () => {
        });
     });
     describe('DELETE request', () => {
-        it('let a user unlike an existing project', (done) => {
+        it('should let a user unlike an existing project', (done) => {
             async.series([
                 (next) => {
                     request(app).delete('/like').send({
