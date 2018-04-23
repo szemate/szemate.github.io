@@ -1,6 +1,6 @@
 # Mira! Programming Course
 
-![]()
+[![](https://imgs.xkcd.com/comics/tags.png)](https://xkcd.com/1144/)
 
 ---
 
