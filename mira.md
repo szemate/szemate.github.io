@@ -4,7 +4,13 @@
 
 ---
 
-### Homework for 1 May
+### 1st session 24 April
+
+The terms we were talking about: software, hardware, source code, function, variable, database,
+file, CPU, memory, terminal, script, algorithm, operating system, client, server, front-end,
+back-end, internet, world wide web, IP address
+
+#### Homework for 1 May
 
 1. Watch [CrashCourse Computer Science Episode 12](https://www.youtube.com/watch?v=l26oaHV7D40) on
 YouTube. It's very dense and packed with information, don't worry if you don't understand
@@ -17,10 +23,10 @@ teacher speaking too fast, subtitles are available.)
       easily.
     - [Atom](https://atom.io/) is a programmers' text editor that is easy to learn.
     - [GitAhead](http://gitahead.scitools.com/) is a graphical user interface for Git that is easy
-      to learn. It's free for non-commercial use (don't click 'buy'.)
-    - [cmder](http://cmder.net/) is a console for running commands. It's enough to download the mini
+      to learn. It's free for non-commercial use.
+    - [cmder](http://cmder.net/) is a command prompt (terminal) for Windows. Download the mini
       version.
-3. Create a [GitHub](https://github.com/join) account so that we'll be able to work on the same project
-together.
+3. Create a [GitHub](https://github.com/join) account so that we'll be able to work on the same
+   project together.
 
 ---
