@@ -10,7 +10,7 @@ The terms we were talking about: software, hardware, source code, function, vari
 file, CPU, memory, terminal, script, algorithm, operating system, client, server, front-end,
 back-end, internet, world wide web, IP address
 
-#### Homework for 1 May
+#### Homework for 8 May
 
 1. Watch [CrashCourse Computer Science Episode 12](https://www.youtube.com/watch?v=l26oaHV7D40) on
 YouTube. It's very dense and packed with information, don't worry if you don't understand
