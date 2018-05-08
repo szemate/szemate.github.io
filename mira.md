@@ -4,6 +4,34 @@
 
 ---
 
+### 2nd session 8 May
+
+#### Things to remember
+
+The "if a condition is true then do something else do something else" instruction is called a
+__decision__ or __conditional__. Any declarative sentence can be used as a condition that is either
+true or false.  Such sentences are called __logical statements__. The "repeat something while a
+condition is true" instruction is called a __while loop__. The "repeat something n times"
+instruction is called a __for loop__. Conditionals and loops are together called __control
+statements__.
+
+The "do a procedure" instruction is called a __call__ or __invocation__ of a procedure. In the
+"turn left by _an angle_" and "open _an object_" procedures _an angle_ and _an object_ are
+__variables__ because you can substitute any number for _an angle_ and various objects for _an
+object_. Variables that procedures are invoked with are called the __arguments__ or __inputs__ of
+the procedure.
+
+Some procedures like "measure the distance" produce a result (in this case the distance) that is
+called the __output__ or __return value__ of the procedure. Procedures that have return values are
+called __functions__. In most modern languages like Python all procedures return some kind of result
+and therefore all procedures are functions.
+
+The procedures your robot already knew when it came out of the factory are called __built-in
+procedures__. You can also borrow and use procedures that someone else wrote, they are called
+__library procedures__.
+
+---
+
 ### 1st session 24 April
 
 The terms we were talking about: software, hardware, source code, function, variable, database,
