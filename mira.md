@@ -36,10 +36,10 @@ said to be written in __pseudocode__.
 
 #### Homework for 15 May
 
-Write a program in pseudocode that helps [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man) (who you
-can find in the bottom right corner) find his way in the maze to the Power Pellet (the large orange
-dot in the top left corner). Bonus points if you can find a route that helps Pac-Man eat as many
-Pac-dots (small orange dots) as possible on the way.
+Write a program in pseudocode that helps [Pac-Man](https://www.youtube.com/watch?v=i_OjztdQ8iw) (who
+you can find in the bottom right corner) find his way in the maze to the Power Pellet (the large
+orange dot in the top left corner). Bonus points if you can find a route that helps Pac-Man eat as
+many Pac-dots (small orange dots) as possible on the way.
 
 ![](pacman.jpg)
 
