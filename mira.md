@@ -103,10 +103,13 @@ Install a few applications:
 - [Python 3](https://www.python.org/downloads/) for running the Python programs we're going to
   write. Make sure to download the 3.x version.
 - [PyCharm](https://www.jetbrains.com/pycharm/) is a programmers' text editor for writing Python
-  code (alternatively, [Atom](https://atom.io/) is an easy-to-learn editor for any language.)
+  code. Download the free Community version instead of the trial version.
 - [Git](https://git-scm.com/downloads) is a version control system to save and share your work
   easily.
 - [GitAhead](http://gitahead.scitools.com/) is a graphical user interface for Git that is easy
-  to learn. It's free for non-commercial use.
+  to learn. Download the free for non-commercial version instead of the trial version.
+
+If you're using Linux, Python and Git are probably already installed. You still need to download
+PyCharm and GitAhead.
 
 ---
