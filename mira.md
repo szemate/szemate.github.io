@@ -23,12 +23,19 @@ called __top-down approach__ to building the system.
 
 #### Homework for 21 May
 
-1. Please download install the software listed under the 1st session's notes, and don't forget to
-   bring your laptop.
-2. Revise the "Things to remember" of the 2nd and 3rd sessions.
-3. __Exercise:__ Describe the process of your daily morning routine. Decompose it into multiple
+1. __Exercise:__ Describe the process of your daily morning routine. Decompose it into multiple
    layers of abstraction (i.e. start with big steps, break them down into smaller steps, then the
    smaller steps into even smaller steps etc.)
+2. Please download install the following applications:
+    - [Python 3](https://www.python.org/downloads/) for running the Python programs we're going to
+      write. Make sure to download the 3.x version.
+    - [PyCharm](https://www.jetbrains.com/pycharm/) is a programmers' text editor for writing Python
+      code. Download the free Community version instead of the trial version.
+    - [Git](https://git-scm.com/downloads) is a version control system to save and share your work
+      easily.
+    - [GitAhead](http://gitahead.scitools.com/) is a graphical user interface for Git that is easy
+      to learn. Download the free for non-commercial version instead of the trial version.
+3. Revise the "Things to remember" of the 2nd and 3rd sessions.
 
 ---
 
@@ -95,21 +102,5 @@ Instead of repeating "go forward, go forward, go forward", use control statement
 The terms we were talking about: software, hardware, source code, function, variable, database,
 file, CPU, memory, terminal, script, algorithm, operating system, client, server, front-end,
 back-end, internet, world wide web, IP address
-
-#### Homework for 8 May
-
-Install a few applications:
-
-- [Python 3](https://www.python.org/downloads/) for running the Python programs we're going to
-  write. Make sure to download the 3.x version.
-- [PyCharm](https://www.jetbrains.com/pycharm/) is a programmers' text editor for writing Python
-  code. Download the free Community version instead of the trial version.
-- [Git](https://git-scm.com/downloads) is a version control system to save and share your work
-  easily.
-- [GitAhead](http://gitahead.scitools.com/) is a graphical user interface for Git that is easy
-  to learn. Download the free for non-commercial version instead of the trial version.
-
-If you're using Linux, Python and Git are probably already installed. You still need to download
-PyCharm and GitAhead.
 
 ---
