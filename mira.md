@@ -26,7 +26,7 @@ called __top-down approach__ to building the system.
 1. __Exercise:__ Describe the process of your daily morning routine. Decompose it into multiple
    layers of abstraction (i.e. start with big steps, break them down into smaller steps, then the
    smaller steps into even smaller steps etc.)
-2. Please download install the following applications:
+2. Please download and install the following applications:
     - [Python 3](https://www.python.org/downloads/) for running the Python programs we're going to
       write. Make sure to download the 3.x version.
     - [PyCharm](https://www.jetbrains.com/pycharm/) is a programmers' text editor for writing Python
