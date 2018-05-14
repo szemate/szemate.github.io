@@ -4,6 +4,34 @@
 
 ---
 
+### 3rd session 14 May
+
+#### Things to remember
+
+A __flowchart__ is a graphical representation of a process. Procedures are represented by
+rectangles, decisions are represented by diamonds, connected by arrows. The start and end points
+(also called entry and exit points) of the process are represented by circles.
+
+Hiding tiny details of a process by larger steps is called __abstraction__. Breaking a complex step
+into smaller pieces is called __decomposition__. A complex system is always built up utilising
+multiple __layers (or levels) of abstraction__. Putting small pieces together to build a complex
+system is called __bottom-up approach__, while breaking complex components down to smaller pieces is
+called __top-down approach__ to building the system.
+
+> “All problems in computer science can be solved by another level of abstraction.” — David Wheeler,
+> CS professor at Cambridge University
+
+#### Homework for 21 May
+
+1. Please download install the software listed under the 1st session's notes, and don't forget to
+   bring your laptop.
+2. Revise the "Things to remember" of the 2nd and 3rd sessions.
+3. __Exercise:__ Describe the process of your daily morning routine. Decompose it into multiple
+   layers of abstraction (i.e. start with big steps, break them down into smaller steps, then the
+   smaller steps into even smaller steps etc.)
+
+---
+
 ### 2nd session 8 May
 
 #### Things to remember
