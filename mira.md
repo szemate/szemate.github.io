@@ -99,6 +99,7 @@ back-end, internet, world wide web, IP address
 #### Homework for 8 May
 
 Install a few applications:
+
 - [Python 3](https://www.python.org/downloads/) for running the Python programs we're going to
   write. Make sure to download the 3.x version.
 - [PyCharm](https://www.jetbrains.com/pycharm/) is a programmers' text editor for writing Python
