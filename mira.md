@@ -70,18 +70,14 @@ back-end, internet, world wide web, IP address
 
 #### Homework for 8 May
 
-1. Install a few applications:
-    - [Python 3](https://www.python.org/downloads/) for running the Python programs we're going to
-      write. Make sure to download the 3.x version.
-    - [Git](https://git-scm.com/downloads) is a version control system to save and share your work
-      easily.
-    - [PyCharm](https://www.jetbrains.com/pycharm/) is a programmers' text editor for writing Python
-      code (alternatively, [Atom](https://atom.io/) is an easy-to-learn editor for any language.)
-    - [GitAhead](http://gitahead.scitools.com/) is a graphical user interface for Git that is easy
-      to learn. It's free for non-commercial use.
-    - [cmder](http://cmder.net/) is a command prompt (terminal) for Windows. Download the mini
-      version.
-2. Create a [GitHub](https://github.com/join) account so that we'll be able to work on the same
-   project together.
+Install a few applications:
+- [Python 3](https://www.python.org/downloads/) for running the Python programs we're going to
+  write. Make sure to download the 3.x version.
+- [PyCharm](https://www.jetbrains.com/pycharm/) is a programmers' text editor for writing Python
+  code (alternatively, [Atom](https://atom.io/) is an easy-to-learn editor for any language.)
+- [Git](https://git-scm.com/downloads) is a version control system to save and share your work
+  easily.
+- [GitAhead](http://gitahead.scitools.com/) is a graphical user interface for Git that is easy
+  to learn. It's free for non-commercial use.
 
 ---
