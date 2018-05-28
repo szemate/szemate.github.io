@@ -2,6 +2,13 @@
 
 [![](https://imgs.xkcd.com/comics/tags.png)](https://xkcd.com/1144/)
 
+
+---
+
+### 4th session 28 May
+
+Example code: [example.py](example.py)
+
 ---
 
 ### 3rd session 14 May
