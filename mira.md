@@ -9,6 +9,12 @@
 
 Example code: [example.py](example.py)
 
+#### Homework for 21 May
+
+Describe the process of your daily morning routine. Decompose it into multiple layers of abstraction
+(i.e. start with big steps, break them down into smaller steps, then the smaller steps into even
+smaller steps etc.)
+
 ---
 
 ### 3rd session 14 May
@@ -28,21 +34,18 @@ called __top-down approach__ to building the system.
 > “All problems in computer science can be solved by another level of abstraction.” — David Wheeler,
 > CS professor at Cambridge University
 
-#### Homework for 21 May
+#### Homework for 4 June
 
-1. __Exercise:__ Describe the process of your daily morning routine. Decompose it into multiple
-   layers of abstraction (i.e. start with big steps, break them down into smaller steps, then the
-   smaller steps into even smaller steps etc.)
-2. Please download and install the following applications:
-    - [Python 3](https://www.python.org/downloads/) for running the Python programs we're going to
-      write. Make sure to download the 3.x version.
-    - [PyCharm](https://www.jetbrains.com/pycharm/) is a programmers' text editor for writing Python
-      code. Download the free Community version instead of the trial version.
-    - [Git](https://git-scm.com/downloads) is a version control system to save and share your work
-      easily.
-    - [GitAhead](http://gitahead.scitools.com/) is a graphical user interface for Git that is easy
-      to learn. Download the free for non-commercial version instead of the trial version.
-3. Revise the "Things to remember" of the 2nd and 3rd sessions.
+Please download and install the following applications:
+
+- [Python 3](https://www.python.org/downloads/) for running the Python programs we're going to
+  write. Make sure to download the 3.x version.
+- [PyCharm](https://www.jetbrains.com/pycharm/) is a programmers' text editor for writing Python
+  code. Download the free Community version instead of the trial version.
+- [Git](https://git-scm.com/downloads) is a version control system to save and share your work
+  easily.
+- [GitAhead](http://gitahead.scitools.com/) is a graphical user interface for Git that is easy
+  to learn. Download the free for non-commercial version instead of the trial version.
 
 ---
 
