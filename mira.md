@@ -2,6 +2,11 @@
 
 [![](https://imgs.xkcd.com/comics/tags.png)](https://xkcd.com/1144/)
 
+---
+
+### 5th session 4 June
+
+Exercises: [download](https://mega.nz/#!hZdBjYjZ!Tqu-jOvfyrr6uUSXnTrIZzFaA98jvCbVs8aH_mSh4TQ)
 
 ---
 
