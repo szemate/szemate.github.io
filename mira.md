@@ -6,7 +6,14 @@
 
 ### 5th session 4 June
 
-Exercises: [download](https://mega.nz/#!hZdBjYjZ!Tqu-jOvfyrr6uUSXnTrIZzFaA98jvCbVs8aH_mSh4TQ)
+The application that we will develop together:
+[download](https://mega.nz/#!hZdBjYjZ!Tqu-jOvfyrr6uUSXnTrIZzFaA98jvCbVs8aH_mSh4TQ)
+
+It requires the [Pygame](https://www.pygame.org/) library, to install it, run the following command
+from a terminal (console):
+```
+pip3 install --user pygame
+```
 
 ---
 
