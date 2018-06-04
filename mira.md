@@ -7,7 +7,7 @@
 ### 5th session 4 June
 
 The application that we will develop together:
-[download](https://mega.nz/#!hZdBjYjZ!Tqu-jOvfyrr6uUSXnTrIZzFaA98jvCbVs8aH_mSh4TQ)
+[download](https://mega.nz/#!oZ1BHRLY!5AiNgKBihTUZPeRnUmf8W1_XDHkjmZAeoGKlcaj-w8I)
 
 It requires the [Pygame](https://www.pygame.org/) library, to install it, run the following command
 from a terminal (console):
