@@ -96,16 +96,28 @@ def hide(obj):
     obj.hide()
 
 
-def move_forward(obj, pixels=10):
-    obj.move_forward(pixels)
+def move_forward(obj):
+    obj.move_forward(20)
 
 
-def turn_left(obj, degrees=90):
-    obj.turn(degrees)
+def turn_left(obj):
+    obj.turn(90)
+    obj.direction = {
+        UPWARD: LEFTWARD,
+        LEFTWARD: DOWNWARD,
+        DOWNWARD: RIGHTWARD,
+        RIGHTWARD: UPWARD,
+    }[obj.direction]
 
 
-def turn_right(obj, degrees=90):
-    obj.turn(-1 * degrees)
+def turn_right(obj):
+    obj.turn(-90)
+    obj.direction = {
+        UPWARD: RIGHTWARD,
+        RIGHTWARD: DOWNWARD,
+        DOWNWARD: LEFTWARD,
+        LEFTWARD: UPWARD,
+    }[obj.direction]
 
 
 def get_current_position(obj):
