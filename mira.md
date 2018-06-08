@@ -15,6 +15,14 @@ from a terminal (console):
 pip3 install --user pygame
 ```
 
+#### Homework for 11 June
+
+Write a procedure (`def ...`) that moves an insect (either the ant or the roach) forward 3 times and
+then prints its position to the console. You should be able to call this procedure with either the
+ant or the roach.
+
+Use this procedure in `def play` to move the ant and then the roach.
+
 ---
 
 ### 4th session 28 May
