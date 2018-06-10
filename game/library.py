@@ -133,7 +133,7 @@ def turn_right(obj):
 
 
 def get_current_position(obj):
-    return obj.image.get_rect().center
+    return obj.position.center
 
 
 def get_distance(obj1, obj2):
