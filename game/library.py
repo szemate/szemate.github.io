@@ -142,14 +142,6 @@ def get_distance(obj1, obj2):
     return int(math.sqrt(abs(x2 - x1) ** 2 + abs(y2 - y1) ** 2))
 
 
-def is_at_the_edge(obj):
-    return (
-        obj.position.left <= 0 or
-        obj.position.right >= SCREEN_WIDTH or
-        obj.position.top <= 0 or
-        obj.position.bottom >= SCREEN_HEIGHT)
-
-
 def print_message(message):
     global last_message
     last_message = str(message)
