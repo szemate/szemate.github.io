@@ -124,6 +124,12 @@ def get_current_position(obj):
     return obj.image.get_rect().center
 
 
+def get_distance(obj1, obj2):
+    x1, y1 = get_current_position(obj1)
+    x2, y2 = get_current_position(obj2)
+    return int(math.sqrt(abs(x2 - x1) ** 2 + abs(y2 - y1) ** 2))
+
+
 def is_at_the_edge(obj):
     return (
         obj.position.left <= 0 or

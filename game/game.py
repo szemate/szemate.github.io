@@ -10,6 +10,7 @@ from library import (
 
     is_at_the_edge,
     get_current_position,
+    get_distance,
 )
 
 
