@@ -2,6 +2,11 @@
 
 [![](https://imgs.xkcd.com/comics/tags.png)](https://xkcd.com/1144/)
 
+### 6th session 11 June
+
+Improved version of the application:
+[download](https://mega.nz/#!VZMmCQhK!46hqDQiMBFvxA47Z4DkLILdmOAAx3f5Z6YwrGUDwpE8)
+
 ---
 
 ### 5th session 4 June
