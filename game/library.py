@@ -1,7 +1,6 @@
-from contextlib import contextmanager
+import inspect
 import math
 import sys
-from time import sleep
 
 import pygame
 
@@ -9,6 +8,7 @@ import pygame
 FPS = 24
 SCREEN_WIDTH = 1024
 SCREEN_HEIGHT = 576
+SCREEN_TOP = 30
 UPWARD, DOWNWARD, LEFTWARD, RIGHTWARD = range(4)
 
 
@@ -17,7 +17,8 @@ pygame.init()  # pylint: disable=no-member
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 background = pygame.image.load('grass.png').convert()
 clock = pygame.time.Clock()
-font = pygame.font.SysFont('Arial', 50)
+font = pygame.font.SysFont('monospace', 25)
+last_message = None
 
 
 class MovableObject:
@@ -69,8 +70,8 @@ class MovableObject:
         elif self.position.right < 0:
             self.position.left = SCREEN_WIDTH
         elif self.position.top > SCREEN_HEIGHT:
-            self.position.bottom = 0
-        elif self.position.bottom < 0:
+            self.position.bottom = SCREEN_TOP
+        elif self.position.bottom < SCREEN_TOP:
             self.position.top = SCREEN_HEIGHT
 
 
@@ -81,9 +82,20 @@ ant = MovableObject('ant.png', (600, 400), UPWARD)
 def redraw_screen():
     pygame.event.get()
     screen.blit(background, (0, 0))
+
     for obj in MovableObject.instances:
         if obj.is_visible:
             screen.blit(obj.image, obj.position)
+
+    pygame.draw.rect(screen, (0, 0, 0), (0, 0, SCREEN_WIDTH, SCREEN_TOP))
+
+    if last_message:
+        put_text("MESSAGE: {}".format(last_message))
+
+    current_code_line = get_current_code_line()
+    if current_code_line:
+        put_text("RUNNING: {}".format(current_code_line), align_right=True)
+
     pygame.display.update()
     clock.tick(FPS)
 
@@ -136,6 +148,24 @@ def is_at_the_edge(obj):
         obj.position.right >= SCREEN_WIDTH or
         obj.position.top <= 0 or
         obj.position.bottom >= SCREEN_HEIGHT)
+
+
+def print_message(message):
+    global last_message
+    last_message = str(message)
+    redraw_screen()
+
+
+def get_current_code_line():
+    if len(inspect.stack()) >= 5:
+        return inspect.stack()[4][4][0].strip()
+    return None
+
+
+def put_text(text, align_right=False):
+    label = font.render(text, 1, (255, 255, 255))
+    x = SCREEN_WIDTH - label.get_width() - 10 if align_right else 10
+    screen.blit(label, (x, 7))
 
 
 def wait_for_keypress():
