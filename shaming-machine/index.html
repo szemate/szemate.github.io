@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shaming Machine</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    >
+    <style type="text/css">
+      a {
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Shaming Machine</h1>
+      </div>
+      <div class="row">
+        <p><em>Choose your religion, and go behind the curtain next to you.</em></p>
+      </div>
+      <div class="row">
+        <h6><a href="#" class="religion" id="catholic">Catholic</a></h6>
+      </div>
+      <div class="row">
+        <h6><a href="#" class="religion" id="protestant">Protestant</a></h6>
+      </div>
+      <div class="row">
+        <h6><a href="#" class="religion" id="muslim">Muslim</a></h6>
+      </div>
+      <div class="row">
+        <h6><a href="#" class="religion" id="jewish">Jewish</a></h6>
+      </div>
+      <div class="row">
+        <h6><a href="#" class="religion" id="buddhist">Buddhist</a></h6>
+      </div>
+      <div class="row">
+        <h6><a href="#" class="religion" id="hindu">Hindu</a></h6>
+      </div>
+      <div class="row">
+        <h6><a href="#" class="religion" id="atheist">Atheist</a></h6>
+      </div>
+      <div class="row">
+        <h6><a href="#" id="stop">✖︎</a></h6>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous">
+    </script>
+    <!-- <script -->
+    <!--   src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" -->
+    <!--   integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" -->
+    <!--   crossorigin="anonymous"> -->
+    <!-- </script> -->
+    <!-- <script -->
+    <!--   src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" -->
+    <!--   integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" -->
+    <!--   crossorigin="anonymous"> -->
+    <!-- </script> -->
+    <script>
+      const shamingList = {
+        'catholic': [
+          'You have too many children!',
+          'You pay for your sins only by confession!',
+          'You deny scientific truths!',
+          'You don’t accept diversity!',
+          'You deny safe sex!',
+        ],
+        'protestant': [
+          'You don’t enjoy life!',
+          'You don’t like art!',
+          'You’re humourless!',
+          'You’re too rigid!',
+          'You don’t have sex!',
+        ],
+        'muslim': [
+          'You shame women!',
+          'You pray too much!',
+          'Your rules are too strict!',
+          'You are a terrorist!',
+          'You force your religion to others!',
+        ],
+        'jewish': [
+          'You’re interested in business more than in your faith!',
+          'You still live with your parents!',
+          'Your eating habits are weird!',
+          'You don’t accept outsiders to your community!',
+          'You’re nose is too big!',
+        ],
+        'buddhist': [
+          'You’re not passionate enough!',
+          'You’re interested in your afterlife too much!',
+          'You don’t have a real God!',
+          'You solve your conflicts with starving!',
+          'You meditate all day!',
+        ],
+        'hindu': [
+          'You don’t let people change their social class!',
+          'You eat leaves only!',
+          'You have too many gods!',
+          'You respect cows more than each other!',
+          'You worship idols!',
+        ],
+        'atheist': [
+          'You don’t have morals!',
+          'You’re too sceptical!',
+          'You’re afraid of death too much!',
+          'You only trust yourself!',
+          'You are the product of the Devil!',
+        ],
+      };
+
+      var activeReligion = null;
+
+      function doTheShaming(religion, i) {
+        console.log(religion, i);
+        let sentence = shamingList[religion][i++];
+
+        if (sentence !== undefined && activeReligion === religion) {
+          let utterance = new SpeechSynthesisUtterance(sentence);
+          utterance.lang = 'en-US';
+          utterance.rate = 0.7
+          utterance.pitch = 0.7
+          utterance.onend = function() {
+            doTheShaming(religion, i == shamingList[religion].length ? 0 : i);
+          }
+          window.speechSynthesis.speak(utterance);
+        }
+      }
+
+      $(document).ready(function() {
+        $('.religion').click(function() {
+          $('#play').remove();
+          $(this).html($(this).html() + '<span id="play"> •</span>');
+
+          activeReligion = $(this).attr('id');
+          window.speechSynthesis.cancel();
+          doTheShaming(activeReligion, 0);
+        });
+
+        $('#stop').click(function() {
+          $('#play').remove();
+          window.speechSynthesis.pause();
+        });
+      });
+    </script>
+  </body>
+</html>
